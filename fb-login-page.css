@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    font-family: arial;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 60px;
+    background-color: rgb(67, 67, 119);
+    flex-wrap: wrap;
+}
+nav #logo{
+    color: white;
+    font-size: 30px;
+}
+nav #field{
+    display: flex;
+    gap: 30px;
+}
+nav #field label{
+    color: white;
+}
+nav #field button{
+    color: white;
+    background: rgb(121, 121, 240);
+    border: none;
+    padding: 0 20px;
+    height: 30px;
+    margin-top: 20px;
+}
+nav #field #field1, #field2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* MAIN */
+main{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px 80px 20px;
+    background: rgb(215, 229, 235);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* main left side */
+main #left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+    min-width: 300px;
+}
+#left-side #accounts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+#left-side #account1, #account2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 5px 1px #888888;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+}
+#left-side #account2 a{
+    font-size: 50px;
+    border: 1px solid black;
+    padding: 35px;
+}
+#left-side #account1 img{
+    height: 130px;
+}
+#left-side #accounts button{
+    color: black;
+    background: white;
+    border: none;
+    padding: 10px 0;
+}
+
+
+/* main right side */
+main #right-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+    min-width: 300px;
+}
+main #right-side #input-text{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+main #right-side label{
+    font-weight: bold;
+}
+main #right-side button{
+    border: none;
+    color: white;
+    background: green;
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+main #right-side a{
+    color: blue;
+}
+
+
+/* FOOTER */
+footer{
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer hr{
+    width: 100%;
+    margin: 0 auto;
+}
+#footer-top ul, #footer-bottom ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+footer p{
+    font-size: 15px;
+}
+
+
+/* ---------------------------------- */
+/*          RESPONSIVE PART           */
+/* ---------------------------------- */
+
+/* TABLET - 992px ↓ */
+@media (max-width: 992px){
+
+    nav{
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    #field{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-side, #right-side{
+        width: 90%;
+    }
+
+    footer{
+        padding: 20px;
+    }
+}
+
+/* MOBILE - 768px ↓ */
+@media (max-width: 768px){
+
+    nav #logo{
+        font-size: 22px;
+    }
+
+    nav #field{
+        gap: 20px;
+    }
+
+    main #left-side #accounts{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main #right-side button{
+        width: 100%;
+    }
+
+    footer ul{
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer p{
+        text-align: center;
+    }
+}
+
+/* SMALL MOBILE - 480px ↓ */
+@media (max-width: 480px){
+
+    nav #field label{
+        font-size: 12px;
+    }
+    nav #field button{
+        padding: 0 10px;
+    }
+
+    #left-side #account2 a{
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    main{
+        padding: 10px;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}
